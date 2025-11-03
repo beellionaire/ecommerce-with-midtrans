@@ -51,8 +51,108 @@
 </div>
 
 
+<div class="w-full bg-white py-12 dark:bg-gray-950">
+    <div id="multi-slide" data-carousel='{
+           "loadingClasses": "opacity-0",
+           "slidesQty": { "xs": 1, "lg": 3 },
+           "autoplay": { "enabled": true, "delay": 5000, "stopOnInteraction": true }
+         }' class="relative max-w-7xl mx-auto mb-10 px-4 sm:px-6 lg:px-0">
+
+        <h2 class="text-2xl font-bold dark:text-white text-gray-900 mb-6 mt-6 px-4 sm:px-6 lg:px-8">Featured Products
+        </h2>
+
+        <div class="carousel h-[600px]">
+            <div class="carousel-body h-full opacity-0">
+                <div class="carousel-slide h-full">
+                    <div
+                        class="relative h-full bg-white border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x600/34D399/FFFFFF?text=Slide+1" alt="Slide 1"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-6 transition-opacity duration-300 group-hover:bg-opacity-50">
+                            <span class="self-center text-3xl font-bold text-white">First slide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide h-full">
+                    <div
+                        class="relative h-full bg-white border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x600/F87171/FFFFFF?text=Slide+2" alt="Slide 2"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-6 transition-opacity duration-300 group-hover:bg-opacity-50">
+                            <span class="self-center text-3xl font-bold text-white">Second slide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide h-full">
+                    <div
+                        class="relative h-full bg-white border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x600/60A5FA/FFFFFF?text=Slide+3" alt="Slide 3"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-6 transition-opacity duration-300 group-hover:bg-opacity-50">
+                            <span class="self-center text-3xl font-bold text-white">Third slide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide h-full">
+                    <div
+                        class="relative h-full bg-white border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x600/FBBF24/FFFFFF?text=Slide+4" alt="Slide 4"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-6 transition-opacity duration-300 group-hover:bg-opacity-50">
+                            <span class="self-center text-3xl font-bold text-white">Fourth slide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide h-full">
+                    <div
+                        class="relative h-full bg-white border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x600/A78BFA/FFFFFF?text=Slide+5" alt="Slide 5"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-6 transition-opacity duration-300 group-hover:bg-opacity-50">
+                            <span class="self-center text-3xl font-bold text-white">Fifth slide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide h-full">
+                    <div
+                        class="relative h-full bg-white border border-gray-100 dark:border-gray-800 rounded-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x600/EC4899/FFFFFF?text=Slide+6" alt="Slide 6"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center p-6 transition-opacity duration-300 group-hover:bg-opacity-50">
+                            <span class="self-center text-3xl font-bold text-white">Sixth slide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol Navigasi -->
+        <button type="button"
+            class="carousel-prev start-5 max-sm:start-3 carousel-disabled:opacity-50 size-9.5 bg-white hover:bg-gray-100 border border-gray-200 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+            <span class="icon-[tabler--chevron-left] size-5 cursor-pointer text-gray-900"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button type="button"
+            class="carousel-next end-5 max-sm:end-3 carousel-disabled:opacity-50 size-9.5 bg-white hover:bg-gray-100 border border-gray-200 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+            <span class="icon-[tabler--chevron-right] size-5 text-gray-900"></span>
+            <span class="sr-only">Next</span>
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
 <!-- Products Section -->
-<div id="featured-products" class="products-section bg-white py-12 dark:bg-slate-900">
+<div id="featured-products" class="products-section bg-white py-12 dark:bg-gray-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->
         <div class="mb-8">
@@ -62,12 +162,12 @@
                 <!-- Search Input -->
                 <div class="w-full sm:flex-1">
                     <input type="text" name="search" value="{{ request('search') }}" placeholder="Search products..."
-                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-500 dark:bg-slate-900 dark:text-white" />
+                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-500 dark:bg-gray-950 dark:text-white" />
                 </div>
                 <!-- Category Filter -->
                 <div class="w-full sm:w-auto">
                     <select name="category"
-                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-500 dark:bg-slate-900 dark:text-white">
+                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-500 dark:bg-gray-950 dark:text-white">
                         <option value="">All Categories</option>
                         @foreach ($categories as $category)
                         <option value="{{ $category->id }}" {{ request('category')==$category->id ? 'selected' : '' }}>
@@ -79,7 +179,7 @@
                 <!-- Sort Filter -->
                 <div class="w-full sm:w-auto">
                     <select name="sort"
-                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-500 dark:bg-slate-900 dark:text-white">
+                        class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:border-emerald-500 dark:bg-gray-950 dark:text-white">
                         <option value="newest" {{ request('sort')=='newest' ? 'selected' : '' }}>Newest</option>
                         <option value="price_low" {{ request('sort')=='price_low' ? 'selected' : '' }}>Price: Low to
                             High</option>
@@ -99,6 +199,12 @@
         <!-- Products Grid -->
         <div id="products-container">
             @include('partials.product-user', ['products' => $products])
+        </div>
+        <div class="text-center">
+            <a href="{{ route('product') }}"
+                class="mt-6 inline-block px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-md transition-all duration-300">
+                All Products
+            </a>
         </div>
     </div>
 </div>

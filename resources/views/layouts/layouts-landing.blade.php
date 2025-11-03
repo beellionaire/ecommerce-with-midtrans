@@ -341,7 +341,6 @@
     <script src="{{ asset('js/app.js') }}"></script>
     @stack('scripts')
     {{--
-       
     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"        
         data-client-key="SB-Mid-client-PS1I8nolVogAFXyg"></script> --}}
 </body>
