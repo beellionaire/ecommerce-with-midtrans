@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
@@ -61,21 +62,22 @@ class AuthController extends Controller
                 Log::error('Error creating user: ' . $e->getMessage());
                 return redirect()->route('register')->with('error', 'Registration failed!');
             }
-        } catch (Exception $e) {
+        } catch (ValidationException $e) {
             DB::rollBack();
-             return redirect()->back()
-             ->withErrors( $e->getMessage())
-             ->withErrors( $e->getMessage() );
-        }catch(Exception $e){
+            return redirect()->back()
+                ->withErrors($e->getMessage())
+                ->withErrors($e->errors());
+        } catch (Exception $e) {
             Log::error('Unexpected error during registration: ' . $e->getMessage());
             return redirect()->back()
-            ->with('error', 'An unexpected error occurred during registration.')
-            ->withInput( $request->except('password' , 'password_confirmation'));
+                ->with('error', 'An unexpected error occurred during registration.')
+                ->withInput($request->except('password', 'password_confirmation'));
         }
     }
 
-    public function login(Request $request){
-        try{
+    public function login(Request $request)
+    {
+        try {
             $credential = $request->validate([
                 'email' => ['required', 'email'],
                 'password' => ['required'],
@@ -84,18 +86,18 @@ class AuthController extends Controller
                 'email.email' => 'Invalid email format.',
                 'password.required' => 'Password is required.',
             ]);
-            if(Auth::attempt($credential , $request->boolean('remember'))){
+            if (Auth::attempt($credential, $request->boolean('remember'))) {
                 $request->session()->regenerate();
                 $user = Auth::user();
                 $redirectTo = $user->isAdmin() ? route('admin.dashboard') : route('home');
                 return redirect()->intended($redirectTo);
             }
-        }catch(Exception $e){
-
+        } catch (Exception $e) {
         }
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
